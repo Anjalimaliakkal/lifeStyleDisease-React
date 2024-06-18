@@ -9,7 +9,10 @@ export const ViewPrescription = () => {
         axios.post("http://localhost:8080/view",data).then((response)=>{
             changeData(response.data)
             console.log(response.data)
-        }).catch()
+        }).catch((error)=>{
+          
+        }
+      )
     }
     useEffect(()=>{
         fetchData()
