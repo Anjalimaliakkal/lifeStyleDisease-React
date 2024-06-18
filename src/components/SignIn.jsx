@@ -12,14 +12,14 @@ const SignIn = () => {
                         <div className="row g-3">
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <label htmlFor="" className="form-label">Email Id</label>
-                                <input type="text"  name='dmail' className="form-control" style={{ width: '50%', height: '50%' }} placeholder='enter your email' onChange={inputHandler} value={data.dmail} />
+                                <input type="text"  className="form-control" style={{ width: '50%', height: '50%' }} placeholder='enter your email'  />
                             </div>
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <label htmlFor="" className="form-label">Password</label>
-                                <input type="password" name="dpassword" id=""    className="form-control" style={{ width: '50%', height: '50%' }} placeholder='enter your password' onChange={inputHandler} value={data.dpassword} />
+                                <input type="password"  id=""    className="form-control" style={{ width: '50%', height: '50%' }} placeholder='enter your password'  />
                             </div>
                             <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                <button className="btn btn-primary" onClick={readValue} >Login</button>
+                                <button className="btn btn-primary"  >Login</button>
                             </div>
                         </div>
                     </div>
