@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import NavBar from './NavBar'
 
 
 const AddPrescription = () => {
 
     const [data, setdata] = useState(
         {
-            "patientId": "",
+            "name": "",
+            "emailid": "",
             "medicine": "",
             "advice": "",
             "remarks": ""
@@ -19,7 +21,7 @@ const AddPrescription = () => {
 
     const readValue = () => {
         console.log(data)
-        axios.post("http://localhost:8080/add", data).then((response) => {
+        axios.post("http://localhost:8080/AddPrescription", data).then((response) => {
             console.log(data)
             if (response.data.status == "success") {
                 alert("Added Successfully")
@@ -32,7 +34,7 @@ const AddPrescription = () => {
     }
     return (
         <div style={{ backgroundImage: 'url("https://cdn.wallpapersafari.com/77/49/GmrQcB.jpg")', backgroundSize: 'cover', minHeight: '100vh' }}>
-         
+         <NavBar/>
             <center><h1 style={{ color: "#0d6efd" }}>ADD  PRESCRIPTION</h1></center>
             <div className="container">
                 <div className="row">
@@ -40,13 +42,18 @@ const AddPrescription = () => {
                         <div className="container">
                             <div className="row g-3">
                                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                    <label for="" class="form-label">PATIENT ID</label>
-                                    <input type="text" className="form-control"placeholder='Enter Patient ID'name='patientId' value={data.patientId} onChange={inputHandler}  />
+                                    <label for="" class="form-label">PATIENT NAME</label>
+                                    <input type="text" className="form-control"placeholder='Enter Patient Name'name='name' value={data.name} onChange={inputHandler}  />
+
+                                </div>
+                                <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                    <label for="" class="form-label">PATIENT EMAIL</label>
+                                    <input type="text" className="form-control"placeholder='Enter Patient Email'name='emailid' value={data.emailid} onChange={inputHandler}  />
 
                                 </div>
                                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                     <label for="" class="form-label">MEDICINE</label>
-                                    <input type="date"  id="" className="form-control"placeholder='Enter Medicine'name='medicine' value={data.medicine} onChange={inputHandler}  />
+                                    <input type="tesxt"  id="" className="form-control"placeholder='Enter Medicine'name='medicine' value={data.medicine} onChange={inputHandler}  />
 
                                    
 
