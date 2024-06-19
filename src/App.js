@@ -3,6 +3,7 @@ import './App.css';
 import AddPrescription from './components/AddPrescription';
 import { ViewPrescription } from './components/ViewPrescription';
 import AddResults from './components/AddResults';
+import DoctorSignup from './components/DoctorSignup';
 
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <AddPrescription/>
       <ViewPrescription/>
       <AddResults/>
+      <DoctorSignup/>
+  
     </div>
   );
 }
