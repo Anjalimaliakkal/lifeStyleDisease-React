@@ -14,7 +14,6 @@ function App() {
       <ViewPrescription/>
       <AddResults/>
       <SignIn/>
-      <SignUp/>
     </div>
   );
 }
