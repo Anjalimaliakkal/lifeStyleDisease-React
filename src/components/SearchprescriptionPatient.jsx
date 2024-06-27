@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import NavBarDoctor from './NavBarDoctor'
 import axios from 'axios'
+import NavBarPatient from './NavBarPatient'
 
-const Searchprescription = () => {
+const SearchprescriptionPatient = () => {
 
     const [data, searchData] = useState(
         {
@@ -22,7 +22,7 @@ const Searchprescription = () => {
     return (
 
         <div style={{ backgroundImage: 'url("https://cdn.wallpapersafari.com/77/49/GmrQcB.jpg")', backgroundSize: 'cover', minHeight: '100vh' }}>
-            <NavBarDoctor />
+            <NavBarPatient />
             <br /><br />
             <center><h1 style={{ color: "#0d6efd" }}>SEARCH PRESCRIPTION</h1></center>
             <br /><br />
@@ -66,7 +66,7 @@ const Searchprescription = () => {
                                                 <td>{value.emailid}</td>
                                                 <td>{value.medicine}</td>
                                                 <td>{value.advice}</td>
-                                                <td>{value.remarks}</td>
+                                                <td>{value.remark}</td>
                                             </tr>
                                         }
                                     )
@@ -78,7 +78,7 @@ const Searchprescription = () => {
                     </div>
                 </div>
                 <div className="col col-12 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
-                    <p><a href="/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to Login</a></p>
+                    <p><a href="/SignInPatient" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to Login</a></p>
                 </div>
 
             </div>
@@ -88,4 +88,4 @@ const Searchprescription = () => {
     )
 }
 
-export default Searchprescription
+export default SearchprescriptionPatient
