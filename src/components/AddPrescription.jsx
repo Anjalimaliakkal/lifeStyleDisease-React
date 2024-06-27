@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import NavBar from './NavBar'
+import NavBarDoctor from './NavBarDoctor'
 
 
 const AddPrescription = () => {
@@ -34,7 +34,7 @@ const AddPrescription = () => {
     }
     return (
         <div style={{ backgroundImage: 'url("https://cdn.wallpapersafari.com/77/49/GmrQcB.jpg")', backgroundSize: 'cover', minHeight: '100vh' }}>
-         <NavBar/>
+         <NavBarDoctor/>
             <center><h1 style={{ color: "#0d6efd" }}>ADD  PRESCRIPTION</h1></center>
             <div className="container">
                 <div className="row">
@@ -72,6 +72,9 @@ const AddPrescription = () => {
                                     <button class="btn btn-primary"onClick={readValue}>ADD  PRESCRIPTION</button>
                                     
                                 </div>
+                                <div className="col col-12 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <p><a href="/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to Login</a></p>
+                            </div>
                             </div>
                         </div>
                     </div>
