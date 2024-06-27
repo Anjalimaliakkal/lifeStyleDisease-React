@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import NavBar from './NavBar'
+import NavBarDoctor from './NavBarDoctor'
 import axios from 'axios'
 
 const Searchprescription = () => {
@@ -20,10 +20,11 @@ const Searchprescription = () => {
         }).catch()
     }
     return (
-        <div>
-            <NavBar />
+
+        <div style={{ backgroundImage: 'url("https://cdn.wallpapersafari.com/77/49/GmrQcB.jpg")', backgroundSize: 'cover', minHeight: '100vh' }}>
+            <NavBarDoctor />
             <br /><br />
-            <center><h1>SEARCH PRESCRIPTION</h1></center>
+            <center><h1 style={{ color: "#0d6efd" }}>SEARCH PRESCRIPTION</h1></center>
             <br /><br />
             <div className="container">
                 <div className="row">
@@ -33,10 +34,10 @@ const Searchprescription = () => {
                                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                                     <label htmlFor="" className="form-label">PATIENT EMAIL</label>
-                                    <input type="text" className="form-control" value={data.emailid} name='emailid' onChange={inputHandler} />
+                                    <input type="text" className="form-control" placeholder='Enter Patient Email' value={data.emailid} name='emailid' onChange={inputHandler} />
                                 </div>
                                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                    <button className="btn btn-warning" onClick={readValue}>Search</button>
+                                    <button className="btn btn-success" onClick={readValue}>Search</button>
                                 </div>
                             </div>
                         </center>
@@ -65,7 +66,7 @@ const Searchprescription = () => {
                                                 <td>{value.emailid}</td>
                                                 <td>{value.medicine}</td>
                                                 <td>{value.advice}</td>
-                                                <td>{value.remark}</td>
+                                                <td>{value.remarks}</td>
                                             </tr>
                                         }
                                     )
@@ -74,10 +75,10 @@ const Searchprescription = () => {
 
                             </tbody>
                         </table>
-
-
-
                     </div>
+                </div>
+                <div className="col col-12 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <p><a href="/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to Login</a></p>
                 </div>
 
             </div>
