@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import NavBar from './NavBar'
+import NavBarPatient from './NavBarPatient'
 
 
 const AddResults = () => {
@@ -34,7 +34,7 @@ const AddResults = () => {
     }
     return (
         <div style={{ backgroundImage: 'url("https://www.liveenhanced.com/wp-content/uploads/2019/02/Best-Online-Doctor-Apps.jpg")', backgroundSize: 'cover', minHeight: '100vh' }}>
-           <NavBar/>
+           <NavBarPatient/>
             <center><h1 style={{ color: "#0d6efd" }}>ADD RESULTS</h1></center>
             
             <div className="container">
@@ -55,9 +55,6 @@ const AddResults = () => {
                                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                     <label for="" class="form-label">DATE</label>
                                     <input type="date"  id="" className="form-control"placeholder='Enter Date'name='date' value={data.date} onChange={inputHandler}  />
-
-                                   
-
                                 </div>
                                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                                     <label htmlFor="" className="form-label">UPLOAD RESULT FILE URL</label>
@@ -71,9 +68,12 @@ const AddResults = () => {
                                 </div>
                                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                     
-                                    <button class="btn btn-primary" onClick={readValue}>ADD PRESCRIPTION</button>
+                                    <button class="btn btn-primary" onClick={readValue}>ADD RESULT</button>
                                     
                                 </div>
+                                <div className="col col-12 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <p><a href="/SignInPatient" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Back to Login</a></p>
+                            </div>
                             </div>
                         </div>
                     </div>
