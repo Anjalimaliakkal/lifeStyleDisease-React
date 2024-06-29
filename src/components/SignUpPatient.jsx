@@ -11,9 +11,13 @@ const SignUpPatient = () => {
             "phone": "",
             "bloodgrp": "",
             "disease": "",
-            "diagnosis":"",
+            "diaganosis":"",
             "password": "",
-            "confirmpassword": ""
+            "confirmpassword": "",
+            "relativename":"",
+            "relation":"",
+            "relativeaddress":"",
+            "relativephone":""
         }
     )
     const inputHandler = (event) => {
@@ -89,7 +93,7 @@ const SignUpPatient = () => {
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <label htmlFor="" className="form-label">Year of Diagnosis</label>
-                            <input type="text" name="diagnosis" id="" onChange={inputHandler} value={data.diagnosis} className="form-control" placeholder='enter here' />
+                            <input type="text" name="diaganosis" id="" onChange={inputHandler} value={data.diaganosis} className="form-control" placeholder='enter here' />
 
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -101,6 +105,26 @@ const SignUpPatient = () => {
                             <label htmlFor="" className="form-label">Confirm Password</label>
                             <input type="password" name="confirmpassword" id="" onChange={inputHandler} value={data.confirmpassword} className="form-control" placeholder='confirm the password' />
 
+                        </div>
+                        <br />
+                       <center> <h3 style={{ color: '#2276bf' }}>EMERGENCY CONTACT</h3></center>
+                        <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label htmlFor="" className="form-label">Name</label>
+                            <input type="text" className="form-control" name='relativename' value={data.relativename} onChange={inputHandler} placeholder='Enter emergency contact name'/>
+
+                        </div>
+                        <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label htmlFor="" className="form-label">Relation</label>
+                            <input type="text" className="form-control" name='relation' value={data.relation} onChange={inputHandler} placeholder='Enter the relation'/>
+
+                        </div>
+                        <div className="col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label htmlFor="" className="form-label">Contact Address</label>
+                            <textarea name="relativeaddress" id="" onChange={inputHandler} value={data.relativeaddress} className="form-control" placeholder='enter address of emergency contact'></textarea>
+                        </div>
+                        <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label htmlFor="" className="form-label">Contact No.</label>
+                            <input type="text" name='relativephone' onChange={inputHandler} value={data.relativephone} className="form-control" placeholder='enter phone number' />
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <center><button className="btn btn-primary" onClick={readValue} >SIGN UP</button></center>
