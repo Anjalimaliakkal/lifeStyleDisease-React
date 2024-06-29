@@ -87,7 +87,7 @@ const SignUpdoctor = () => {
                             <center><button className="btn btn-primary" onClick={readValue} >SIGN UP</button></center>
                         </div>
                         <div className="col col-12 col-sm-6 col-lg-6 col-xl-6 col-xxl-6">
-                            <p><a href="/SignIndoctor" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Click to Login</a></p>
+                            <p><a href="/" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Click to Login</a></p>
                             </div>
                     </div>
                 </div>
