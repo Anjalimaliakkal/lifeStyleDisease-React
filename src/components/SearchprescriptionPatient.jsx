@@ -66,7 +66,7 @@ const SearchprescriptionPatient = () => {
                                                 <td>{value.emailid}</td>
                                                 <td>{value.medicine}</td>
                                                 <td>{value.advice}</td>
-                                                <td>{value.remark}</td>
+                                                <td>{value.remarks}</td>
                                             </tr>
                                         }
                                     )

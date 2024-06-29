@@ -37,6 +37,7 @@ const SearchResult = () => {
                             <button className="btn btn-success" onClick={readValue}>Search</button>
                         </div>
                     </div>
+                    <br />
                     </center>
                     <div className="row">
                         <col className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" />
@@ -59,7 +60,7 @@ const SearchResult = () => {
                                                 <th scope="row">{value.emailid}</th>
                                                 <td>{value.name}</td>
                                                 <td>{value.date}</td>
-                                                <td>{value.resulturl}</td>
+                                                <td><img src={value.resulturl} height="300px"/></td>
                                                 <td>{value.remarks}</td>
 
                                             </tr>
