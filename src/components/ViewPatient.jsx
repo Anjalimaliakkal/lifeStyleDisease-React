@@ -47,7 +47,7 @@ const ViewPatient = () => {
                                                         <td>{value.age}</td>
                                                         <td>{value.bloodgrp}</td>
                                                         <td>{value.disease}</td>
-                                                        <td>{value.diaganosis}</td>
+                                                        <td>{value.diagnosis}</td>
                                                     </tr>
                                                 }
                                             )
