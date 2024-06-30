@@ -11,7 +11,7 @@ const SignUpPatient = () => {
             "phone": "",
             "bloodgrp": "",
             "disease": "",
-            "diaganosis":"",
+            "diagnosis":"",
             "password": "",
             "confirmpassword": "",
             "relativename":"",
@@ -93,7 +93,7 @@ const SignUpPatient = () => {
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <label htmlFor="" className="form-label">Year of Diagnosis</label>
-                            <input type="text" name="diaganosis" id="" onChange={inputHandler} value={data.diaganosis} className="form-control" placeholder='enter here' />
+                            <input type="text" name="diagnosis" id="" onChange={inputHandler} value={data.diagnosis} className="form-control" placeholder='enter here' />
 
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
